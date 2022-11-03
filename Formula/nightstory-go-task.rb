@@ -5,13 +5,13 @@
 class NightstoryGoTask < Formula
   desc "Task runner / simpler Make alternative written in Go"
   homepage "https://taskfile.dev"
-  version "3.17.0-nightstory"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/nightstory/task/releases/download/v3.17.0-nightstory/task_darwin_amd64.tar.gz"
-      sha256 "da7fa08e12c43541a56ba3a59c0480158098b4101a56b2936b82d5ec95d5f46f"
+    if Hardware::CPU.arm?
+      url "https://github.com/nightstory/task/releases/download/v1.0.0/task_darwin_arm64.tar.gz"
+      sha256 "3bbedb1f1635b01507f23887d0471b84d0d11ee9ef99d84e4e72c9014119606d"
 
       def install
         bin.install "task"
@@ -20,9 +20,9 @@ class NightstoryGoTask < Formula
         fish_completion.install "completion/fish/task.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/nightstory/task/releases/download/v3.17.0-nightstory/task_darwin_arm64.tar.gz"
-      sha256 "9b29d6454f49edc65f4c94ce09e2572def75acea5c29d48d597fe2977e423b3f"
+    if Hardware::CPU.intel?
+      url "https://github.com/nightstory/task/releases/download/v1.0.0/task_darwin_amd64.tar.gz"
+      sha256 "559f9d0407e40df8b32281495897012ef2918009220125e7f0b9f1fd932f414f"
 
       def install
         bin.install "task"
@@ -34,9 +34,9 @@ class NightstoryGoTask < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nightstory/task/releases/download/v3.17.0-nightstory/task_linux_arm64.tar.gz"
-      sha256 "6a0b17984cd13c124c43b3175967964315488cdd518a74ed3b9c078e359e4e99"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/nightstory/task/releases/download/v1.0.0/task_linux_arm.tar.gz"
+      sha256 "0af34404b6486f5bb2c957b46e233866666b4bb62d8fe17c09998534b6bf802b"
 
       def install
         bin.install "task"
@@ -46,8 +46,8 @@ class NightstoryGoTask < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nightstory/task/releases/download/v3.17.0-nightstory/task_linux_amd64.tar.gz"
-      sha256 "dea9cd8ec5a7adfb4b23695631b9b57589e1643860a201006b77993c3af4cc95"
+      url "https://github.com/nightstory/task/releases/download/v1.0.0/task_linux_amd64.tar.gz"
+      sha256 "5f63d1787127a9799b9c306dbaf1832206ffcd90ffc93882896d497000ea4ef4"
 
       def install
         bin.install "task"
@@ -56,9 +56,9 @@ class NightstoryGoTask < Formula
         fish_completion.install "completion/fish/task.fish"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/nightstory/task/releases/download/v3.17.0-nightstory/task_linux_arm.tar.gz"
-      sha256 "bbe278dfc3cb261f67d41ae90af4bd732d17420880c914e3af9b9a06506a62f3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nightstory/task/releases/download/v1.0.0/task_linux_arm64.tar.gz"
+      sha256 "a47edf8a746e938387db39b53fe6092500b08fe76dfe5ec1f13c58c63689ddfd"
 
       def install
         bin.install "task"
