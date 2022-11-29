@@ -5,13 +5,13 @@
 class NightstoryGoTask < Formula
   desc "Task runner / simpler Make alternative written in Go"
   homepage "https://taskfile.dev"
-  version "1.0.2"
+  version "0.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nightstory/task/releases/download/v1.0.2/task_darwin_amd64.tar.gz"
-      sha256 "4c083e1f4956e99a5beb4d3b210438a20cc6823d88b10cd05cb3fb6554ca0726"
+      url "https://github.com/nightstory/task/releases/download/v0.0.1/task_darwin_amd64.tar.gz"
+      sha256 "cdfeb1bf81962b780e1ff2d70b9a341401fcdd82812f2e2ca46814447c4fd209"
 
       def install
         bin.install "task"
@@ -21,8 +21,8 @@ class NightstoryGoTask < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nightstory/task/releases/download/v1.0.2/task_darwin_arm64.tar.gz"
-      sha256 "7831f64b2ec97ca08e56c8c7638fe3f2ee1956007c6974b8e6f4897c5907ef97"
+      url "https://github.com/nightstory/task/releases/download/v0.0.1/task_darwin_arm64.tar.gz"
+      sha256 "b0bb8730bf7744dcdd6f67eda2bed10ab58a53bfc1ed277bbb7c54973ae298cb"
 
       def install
         bin.install "task"
@@ -35,8 +35,8 @@ class NightstoryGoTask < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/nightstory/task/releases/download/v1.0.2/task_linux_amd64.tar.gz"
-      sha256 "905cfe8dde571545e841f4ef0cc29d17de35955b926f65b385f5033f4d213c2d"
+      url "https://github.com/nightstory/task/releases/download/v0.0.1/task_linux_amd64.tar.gz"
+      sha256 "89d4f11f5d7fae182faae16d1bb74c9bd40128fec0a974716098cce80d1b6c5b"
 
       def install
         bin.install "task"
@@ -46,8 +46,8 @@ class NightstoryGoTask < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/nightstory/task/releases/download/v1.0.2/task_linux_arm.tar.gz"
-      sha256 "764174a6278057828222f009e11adc12524f55e8cb90457f4d8401984e82fb6e"
+      url "https://github.com/nightstory/task/releases/download/v0.0.1/task_linux_arm.tar.gz"
+      sha256 "f15374dc3f89e42d8440b7880630e6c2ca7cfcd9146b1b49494d931fd6e44c4b"
 
       def install
         bin.install "task"
@@ -57,8 +57,8 @@ class NightstoryGoTask < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nightstory/task/releases/download/v1.0.2/task_linux_arm64.tar.gz"
-      sha256 "f9105ec2aeed2376978c1c8bd192c72151fae69a9e991c7fc070b63cd5a7544e"
+      url "https://github.com/nightstory/task/releases/download/v0.0.1/task_linux_arm64.tar.gz"
+      sha256 "f88a7e560e05d6c54f37ed1fce8f3ae6d1b32edd97dcbc5325c264b95e9f36f7"
 
       def install
         bin.install "task"
